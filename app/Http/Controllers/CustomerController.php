@@ -40,6 +40,6 @@ class CustomerController extends Controller
         /** @var User $user */
         $user = Auth::user();
         Customer::save($user, $card);
-        return back()->with('success', 'Card has been saved.');
+        return redirect()->route('products')->with('success', 'Card has been saved.');
     }
 }

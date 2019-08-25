@@ -2,9 +2,7 @@
 
 namespace App\Http\Middleware;
 
-use App\User;
 use Closure;
-use Illuminate\Support\Facades\Auth;
 
 class HasPaymentMethod
 {
@@ -17,10 +15,8 @@ class HasPaymentMethod
      */
     public function handle($request, Closure $next)
     {
-        /** @var User $user */
-        $user = Auth::user();
-        if(is_null($user->stripe_customer_id)){
-            return redirect()->route('');
+        if(is_null(auth()->user()->stripe_customer_id)){
+            return redirect()->route('save.customer')->with('error', 'You need a payment method!');
         }
         return $next($request);
     }

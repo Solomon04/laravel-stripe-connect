@@ -51,16 +51,6 @@ class User extends Authenticatable
     }
 
     /**
-     * Show all orders that belong to a user.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function orders()
-    {
-        return $this->hasMany(Order::class, 'customer_id', 'id');
-    }
-
-    /**
      * Show all payments that belong to the user.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany

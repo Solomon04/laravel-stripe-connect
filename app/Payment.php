@@ -8,7 +8,7 @@ class Payment extends Model
 {
     protected $table = 'payments';
 
-    protected $fillable = ['customer_id', 'stripe_charge_id', 'paid_out', 'fees_collected', 'refunded'];
+    protected $fillable = ['customer_id', 'product_id' ,'stripe_charge_id', 'paid_out', 'fees_collected', 'refunded'];
 
     protected $casts = ['refunded' => 'boolean'];
 
@@ -17,8 +17,8 @@ class Payment extends Model
         return $this->hasOne(User::class, 'customer_id');
     }
 
-    public function order()
+    public function product()
     {
-        return $this->belongsTo(Order::class, 'payment_id', 'id');
+        return $this->hasOne(User::class, 'product_id');
     }
 }
