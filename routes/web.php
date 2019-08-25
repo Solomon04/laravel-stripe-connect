@@ -11,6 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('home');
+//});
+
+Auth::routes();
+
+//Route::get('/', 'HomeController@index')->name('home');
+Route::get('/', 'ProductController@index')->name('products');
+Route::get('/save', 'CustomerController@form')->name('stripe.form');
+Route::post('/save', 'CustomerController@save')->name('save.customer');

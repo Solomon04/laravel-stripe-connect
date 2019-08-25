@@ -34,4 +34,10 @@ return [
         'secret' => env('SPARKPOST_SECRET'),
     ],
 
+    'stripe' => [
+        'public' => env('STRIPE_PUBLIC'),
+        'secret' => env('STRIPE_SECRET'),
+        'connect' => env('STRIPE_CONNECT')
+    ]
+
 ];

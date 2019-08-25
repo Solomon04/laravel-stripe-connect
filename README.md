@@ -1,6 +1,7 @@
 # Laravel Stripe Express Tutorial
 This is a boilerplate repo showing how to use <a href='https://stripe.com/docs/connect/express-accounts'>Stripe Express Connect</a> with Laravel. 
 
+## Introduction
 ### What Is Stripe Express?
 Express accounts are a type of Stripe connect account and is generally used for two sided marketplaces where there is a seller selling services or a product and a buyer of those services/product. Examples include:
 - Etsy
@@ -17,3 +18,5 @@ In this boilerplate, we have two types of users. Sellers, who sell their product
 When a customer purchases a product from a seller, the charge will be intiaied directly to the connected account, while your platform will collect a simple application fee. Reference the image below to see the flow of funds during a purchase:
 
 ![Stripe Image](https://stripe.com/img/docs/connect/direct_charges.png "Flow of Funds")
+
+## Getting Started
