@@ -20,3 +20,28 @@ When a customer purchases a product from a seller, the charge will be collected 
 ![Stripe Image](https://stripe.com/img/docs/connect/charges_transfers.png "Flow of Funds")
 
 ## Getting Started
+
+##### Clone Project
+`git clone https://github.com/Solomon04/laravel-stripe-connect`
+
+##### Install Dependencies
+`cd laravel-stripe-connect`
+
+`composer install`
+
+##### Environment Variables
+`cp .env.example .env`
+
+Then update your env file with your database & Stripe credentials.
+
+##### Link Storage
+`php artisan storage:link`
+
+##### Migrate and Seed Database (optional)
+`php artisan migrate --seed`
+
+##### Start Server
+`php artisan serve`
+
+### Questions or Concerns? 
+Open a PR or contact me directly at antoinesolomon5@gmail.com

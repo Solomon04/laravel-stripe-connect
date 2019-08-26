@@ -19,11 +19,11 @@
                             <p class="card-text"><small class="text-muted">Sold by <b>{{$product->seller->name}}</b> </small></p>
                         </div>
                         <div class="card-footer">
-                            <button data-toggle="modal" data-target="#purchaseModal" class="btn btn-primary btn-block">Buy for ${{$product->price}}</button>
+                            <button data-toggle="modal" data-target="#purchaseModal_{{$product->id}}" class="btn btn-primary btn-block">Buy for ${{$product->price}}</button>
                         </div>
 
                             <!-- Modal -->
-                            <div class="modal fade" id="purchaseModal" tabindex="-1" role="dialog" aria-labelledby="purchaseModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="purchaseModal_{{$product->id}}" tabindex="-1" role="dialog" aria-labelledby="purchaseModalLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
