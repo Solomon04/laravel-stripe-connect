@@ -34,6 +34,9 @@ When a customer purchases a product from a seller, the charge will be collected 
 
 Then update your env file with your database & Stripe credentials.
 
+##### Generate application encryption key
+`php artisan key:generate`
+
 ##### Link Storage
 `php artisan storage:link`
 
